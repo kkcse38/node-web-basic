@@ -21,9 +21,10 @@ app.use((req, res, next)=>{
     next();
 });
 
-app.use((req, res, next)=>{
-    res.render('maintenance.hbs');
-});
+//Hide the maintenance section
+// app.use((req, res, next)=>{
+//     res.render('maintenance.hbs');
+// });
 
 //After writing this statement here, It makes the views file private and not allowed to execute after render
 app.use(express.static(__dirname + '/views'));
