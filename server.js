@@ -72,6 +72,12 @@ app.get('/bad', (req, res)=>{
     });
 });
 
+app.get('/project', (req, res)=>{
+    res.render('project.hbs',{
+        projectTitle : 'Node.js Project'
+    });
+});
+
 //We do need to listen app.get by app.listen method
 app.listen(port, ()=>{
     console.log(`Server listen on port ${port}`);
